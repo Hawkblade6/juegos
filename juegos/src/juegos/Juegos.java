@@ -12,7 +12,7 @@ public class Juegos {
     public static void main(String[] args) {
         
         System.out.println("PrimerCommit");
-        System.out.println("as");
+        
     }
     
 }
