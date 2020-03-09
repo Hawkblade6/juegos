@@ -33,17 +33,11 @@ public class Pantalla extends javax.swing.JFrame {
     }
 
     void rollDice(Pantalla pantalla) {
-        int k = 1;
-        int q = 2;
-        int j = 3;
-        int nueve = 4;
-        int a = 5;
-
         new Thread() {
             @Override
             public void run() {
                 try {
-                    int veces = (int) (Math.random() * 20) + 1;
+                    int veces = 8;
                     
                     for (int i = 0; i <= veces; i++) {
 
@@ -86,33 +80,362 @@ public class Pantalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        TLPlayerSet1 = new javax.swing.JPanel();
+        TLPlayerName1 = new javax.swing.JLabel();
+        TLPlayerOrder1 = new javax.swing.JLabel();
+        TLPlayerPlay1 = new javax.swing.JLabel();
+        TLPlayerPoints1 = new javax.swing.JLabel();
+        TRPlayerSet1 = new javax.swing.JPanel();
+        TRPlayerName1 = new javax.swing.JLabel();
+        TRPlayerOrder1 = new javax.swing.JLabel();
+        TRPlayerPlay1 = new javax.swing.JLabel();
+        TRPlayerPoints1 = new javax.swing.JLabel();
         King = new javax.swing.JLabel();
         Queen = new javax.swing.JLabel();
         Jack = new javax.swing.JLabel();
         Ten = new javax.swing.JLabel();
         Ace = new javax.swing.JLabel();
+        TLPlayerSet = new javax.swing.JPanel();
+        TLPlayerName = new javax.swing.JLabel();
+        TLPlayerOrder = new javax.swing.JLabel();
+        TLPlayerPlay = new javax.swing.JLabel();
+        TLPlayerPoints = new javax.swing.JLabel();
+        TRPlayerSet = new javax.swing.JPanel();
+        TRPlayerName = new javax.swing.JLabel();
+        TRPlayerOrder = new javax.swing.JLabel();
+        TRPlayerPlay = new javax.swing.JLabel();
+        TRPlayerPoints = new javax.swing.JLabel();
+        BRPlayerSet = new javax.swing.JPanel();
+        BRPlayerName = new javax.swing.JLabel();
+        BRPlayerOrder = new javax.swing.JLabel();
+        BRPlayerPlay = new javax.swing.JLabel();
+        BRPlayerPoints = new javax.swing.JLabel();
+        BLPlayerSet = new javax.swing.JPanel();
+        BLPlayerName = new javax.swing.JLabel();
+        BLPlayerOrder = new javax.swing.JLabel();
+        BLPlayerPoints = new javax.swing.JLabel();
+        BLPlayerPlay = new javax.swing.JLabel();
         bkgrnd = new javax.swing.JLabel();
+
+        TLPlayerName1.setText("Jugador 4");
+
+        TLPlayerOrder1.setText("4º");
+
+        TLPlayerPlay1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TLPlayerPlay1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TLPlayerPlay1.setText("DP");
+        TLPlayerPlay1.setMaximumSize(new java.awt.Dimension(20, 20));
+        TLPlayerPlay1.setMinimumSize(new java.awt.Dimension(20, 20));
+        TLPlayerPlay1.setPreferredSize(new java.awt.Dimension(20, 20));
+
+        TLPlayerPoints1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TLPlayerPoints1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TLPlayerPoints1.setText("10");
+
+        javax.swing.GroupLayout TLPlayerSet1Layout = new javax.swing.GroupLayout(TLPlayerSet1);
+        TLPlayerSet1.setLayout(TLPlayerSet1Layout);
+        TLPlayerSet1Layout.setHorizontalGroup(
+            TLPlayerSet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TLPlayerSet1Layout.createSequentialGroup()
+                .addGroup(TLPlayerSet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(TLPlayerSet1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(TLPlayerPlay1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(TLPlayerSet1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(TLPlayerName1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TLPlayerOrder1)
+                        .addGap(0, 8, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TLPlayerSet1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(TLPlayerPoints1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52))
+        );
+        TLPlayerSet1Layout.setVerticalGroup(
+            TLPlayerSet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TLPlayerSet1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TLPlayerSet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TLPlayerName1)
+                    .addComponent(TLPlayerOrder1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TLPlayerPlay1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(TLPlayerPoints1)
+                .addContainerGap())
+        );
+
+        TRPlayerName1.setText("Jugador 1");
+
+        TRPlayerOrder1.setText("1º");
+
+        TRPlayerPlay1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TRPlayerPlay1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TRPlayerPlay1.setText("TRIO");
+        TRPlayerPlay1.setMaximumSize(new java.awt.Dimension(20, 20));
+        TRPlayerPlay1.setMinimumSize(new java.awt.Dimension(20, 20));
+        TRPlayerPlay1.setPreferredSize(new java.awt.Dimension(20, 20));
+
+        TRPlayerPoints1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TRPlayerPoints1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TRPlayerPoints1.setText("10");
+
+        javax.swing.GroupLayout TRPlayerSet1Layout = new javax.swing.GroupLayout(TRPlayerSet1);
+        TRPlayerSet1.setLayout(TRPlayerSet1Layout);
+        TRPlayerSet1Layout.setHorizontalGroup(
+            TRPlayerSet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TRPlayerSet1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(TRPlayerName1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TRPlayerOrder1)
+                .addContainerGap(20, Short.MAX_VALUE))
+            .addGroup(TRPlayerSet1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TRPlayerSet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TRPlayerPlay1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TRPlayerPoints1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        TRPlayerSet1Layout.setVerticalGroup(
+            TRPlayerSet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TRPlayerSet1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TRPlayerSet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TRPlayerName1)
+                    .addComponent(TRPlayerOrder1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TRPlayerPlay1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(TRPlayerPoints1)
+                .addContainerGap())
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         King.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PokerDeDados/fotos/dado.PNG"))); // NOI18N
-        getContentPane().add(King, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 100, 100));
+        getContentPane().add(King, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 100, 100));
 
         Queen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PokerDeDados/fotos/dado2.png"))); // NOI18N
-        getContentPane().add(Queen, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 100, 100));
+        getContentPane().add(Queen, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 100, 100));
 
         Jack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PokerDeDados/fotos/dado3.PNG"))); // NOI18N
-        getContentPane().add(Jack, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 100, 100));
+        getContentPane().add(Jack, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 100, 100));
 
         Ten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PokerDeDados/fotos/dado4.PNG"))); // NOI18N
-        getContentPane().add(Ten, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 100, 100));
+        getContentPane().add(Ten, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 100, 100));
 
         Ace.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PokerDeDados/fotos/dado5.PNG"))); // NOI18N
-        getContentPane().add(Ace, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 100, 100));
+        getContentPane().add(Ace, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 100, 100));
+
+        TLPlayerSet.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        TLPlayerName.setText("Jugador 4");
+
+        TLPlayerOrder.setText("4º");
+
+        TLPlayerPlay.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TLPlayerPlay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TLPlayerPlay.setText("DP");
+        TLPlayerPlay.setMaximumSize(new java.awt.Dimension(20, 20));
+        TLPlayerPlay.setMinimumSize(new java.awt.Dimension(20, 20));
+        TLPlayerPlay.setPreferredSize(new java.awt.Dimension(20, 20));
+
+        TLPlayerPoints.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TLPlayerPoints.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TLPlayerPoints.setText("10");
+
+        javax.swing.GroupLayout TLPlayerSetLayout = new javax.swing.GroupLayout(TLPlayerSet);
+        TLPlayerSet.setLayout(TLPlayerSetLayout);
+        TLPlayerSetLayout.setHorizontalGroup(
+            TLPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TLPlayerSetLayout.createSequentialGroup()
+                .addGroup(TLPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TLPlayerSetLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(TLPlayerPlay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TLPlayerSetLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(TLPlayerName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TLPlayerOrder)
+                        .addGap(0, 4, Short.MAX_VALUE))
+                    .addGroup(TLPlayerSetLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(TLPlayerPoints, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        TLPlayerSetLayout.setVerticalGroup(
+            TLPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TLPlayerSetLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TLPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TLPlayerName)
+                    .addComponent(TLPlayerOrder))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TLPlayerPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(TLPlayerPoints)
+                .addContainerGap())
+        );
+
+        getContentPane().add(TLPlayerSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 140, 110));
+
+        TRPlayerSet.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        TRPlayerName.setText("Jugador 1");
+
+        TRPlayerOrder.setText("1º");
+
+        TRPlayerPlay.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TRPlayerPlay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TRPlayerPlay.setText("TRIO");
+        TRPlayerPlay.setMaximumSize(new java.awt.Dimension(20, 20));
+        TRPlayerPlay.setMinimumSize(new java.awt.Dimension(20, 20));
+        TRPlayerPlay.setPreferredSize(new java.awt.Dimension(20, 20));
+
+        TRPlayerPoints.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TRPlayerPoints.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TRPlayerPoints.setText("10");
+
+        javax.swing.GroupLayout TRPlayerSetLayout = new javax.swing.GroupLayout(TRPlayerSet);
+        TRPlayerSet.setLayout(TRPlayerSetLayout);
+        TRPlayerSetLayout.setHorizontalGroup(
+            TRPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TRPlayerSetLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(TRPlayerName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TRPlayerOrder)
+                .addContainerGap(16, Short.MAX_VALUE))
+            .addGroup(TRPlayerSetLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TRPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TRPlayerPlay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TRPlayerPoints, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        TRPlayerSetLayout.setVerticalGroup(
+            TRPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TRPlayerSetLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TRPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TRPlayerName)
+                    .addComponent(TRPlayerOrder))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TRPlayerPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TRPlayerPoints)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(TRPlayerSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 30, 140, 110));
+
+        BRPlayerSet.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        BRPlayerName.setText("Jugador 2");
+
+        BRPlayerOrder.setText("2º");
+
+        BRPlayerPlay.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        BRPlayerPlay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BRPlayerPlay.setText("PÓKER");
+        BRPlayerPlay.setMaximumSize(new java.awt.Dimension(20, 20));
+        BRPlayerPlay.setMinimumSize(new java.awt.Dimension(20, 20));
+        BRPlayerPlay.setPreferredSize(new java.awt.Dimension(20, 20));
+
+        BRPlayerPoints.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        BRPlayerPoints.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BRPlayerPoints.setText("10");
+
+        javax.swing.GroupLayout BRPlayerSetLayout = new javax.swing.GroupLayout(BRPlayerSet);
+        BRPlayerSet.setLayout(BRPlayerSetLayout);
+        BRPlayerSetLayout.setHorizontalGroup(
+            BRPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BRPlayerSetLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(BRPlayerName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BRPlayerOrder)
+                .addContainerGap(16, Short.MAX_VALUE))
+            .addGroup(BRPlayerSetLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BRPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BRPlayerPoints, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BRPlayerPlay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        BRPlayerSetLayout.setVerticalGroup(
+            BRPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BRPlayerSetLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BRPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BRPlayerName)
+                    .addComponent(BRPlayerOrder))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BRPlayerPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BRPlayerPoints)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(BRPlayerSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 440, 140, 110));
+
+        BLPlayerSet.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        BLPlayerName.setText("Jugador 3");
+
+        BLPlayerOrder.setText("3º");
+
+        BLPlayerPoints.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        BLPlayerPoints.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BLPlayerPoints.setText("10");
+
+        BLPlayerPlay.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        BLPlayerPlay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BLPlayerPlay.setText("NADA");
+        BLPlayerPlay.setMaximumSize(new java.awt.Dimension(20, 20));
+        BLPlayerPlay.setMinimumSize(new java.awt.Dimension(20, 20));
+        BLPlayerPlay.setPreferredSize(new java.awt.Dimension(20, 20));
+
+        javax.swing.GroupLayout BLPlayerSetLayout = new javax.swing.GroupLayout(BLPlayerSet);
+        BLPlayerSet.setLayout(BLPlayerSetLayout);
+        BLPlayerSetLayout.setHorizontalGroup(
+            BLPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BLPlayerSetLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(BLPlayerName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BLPlayerOrder)
+                .addContainerGap(16, Short.MAX_VALUE))
+            .addGroup(BLPlayerSetLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BLPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BLPlayerPoints, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BLPlayerPlay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        BLPlayerSetLayout.setVerticalGroup(
+            BLPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BLPlayerSetLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BLPlayerSetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BLPlayerName)
+                    .addComponent(BLPlayerOrder))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BLPlayerPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BLPlayerPoints)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(BLPlayerSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 140, 110));
 
         bkgrnd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PokerDeDados/fotos/foto.jpg"))); // NOI18N
-        getContentPane().add(bkgrnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 520));
+        getContentPane().add(bkgrnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1160, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -159,9 +482,39 @@ public class Pantalla extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Ace;
+    private javax.swing.JLabel BLPlayerName;
+    private javax.swing.JLabel BLPlayerOrder;
+    private javax.swing.JLabel BLPlayerPlay;
+    private javax.swing.JLabel BLPlayerPoints;
+    private javax.swing.JPanel BLPlayerSet;
+    private javax.swing.JLabel BRPlayerName;
+    private javax.swing.JLabel BRPlayerOrder;
+    private javax.swing.JLabel BRPlayerPlay;
+    private javax.swing.JLabel BRPlayerPoints;
+    private javax.swing.JPanel BRPlayerSet;
     private javax.swing.JLabel Jack;
     private javax.swing.JLabel King;
     private javax.swing.JLabel Queen;
+    private javax.swing.JLabel TLPlayerName;
+    private javax.swing.JLabel TLPlayerName1;
+    private javax.swing.JLabel TLPlayerOrder;
+    private javax.swing.JLabel TLPlayerOrder1;
+    private javax.swing.JLabel TLPlayerPlay;
+    private javax.swing.JLabel TLPlayerPlay1;
+    private javax.swing.JLabel TLPlayerPoints;
+    private javax.swing.JLabel TLPlayerPoints1;
+    private javax.swing.JPanel TLPlayerSet;
+    private javax.swing.JPanel TLPlayerSet1;
+    private javax.swing.JLabel TRPlayerName;
+    private javax.swing.JLabel TRPlayerName1;
+    private javax.swing.JLabel TRPlayerOrder;
+    private javax.swing.JLabel TRPlayerOrder1;
+    private javax.swing.JLabel TRPlayerPlay;
+    private javax.swing.JLabel TRPlayerPlay1;
+    private javax.swing.JLabel TRPlayerPoints;
+    private javax.swing.JLabel TRPlayerPoints1;
+    private javax.swing.JPanel TRPlayerSet;
+    private javax.swing.JPanel TRPlayerSet1;
     private javax.swing.JLabel Ten;
     private javax.swing.JLabel bkgrnd;
     // End of variables declaration//GEN-END:variables
