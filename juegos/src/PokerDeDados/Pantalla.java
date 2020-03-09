@@ -74,8 +74,7 @@ public class Pantalla extends javax.swing.JFrame {
         }.start();
 
     }
-    
-    
+      
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -473,7 +472,7 @@ public class Pantalla extends javax.swing.JFrame {
             pantalla.setVisible(true);
             pantalla.bkgrnd.setVisible(true);
             
-            
+        
             pantalla.rollDice(pantalla);
         }
         
