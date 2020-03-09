@@ -11,6 +11,9 @@ package PokerDeDados;
  */
 public class Pantalla extends javax.swing.JFrame {
 
+    boolean segundaVez = false;
+    String dadosSellecionados = "";
+
     /**
      * Creates new form Pantalla
      */
@@ -624,7 +627,6 @@ public class Pantalla extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void TirarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TirarMousePressed
-        Pantalla pantalla = new Pantalla();
 
         javax.swing.JLabel dado[][] = {
             {King, Queen, Jack, Nine, Ten, Ace
@@ -640,19 +642,49 @@ public class Pantalla extends javax.swing.JFrame {
 
         };
 
-        for (int i = 0; i < dado.length; i++) {
+        if (this.segundaVez == false) {
 
-            Pantalla.rollDice(dado[i][0], dado[i][1], dado[i][2], dado[i][3], dado[i][4], dado[i][5]);
+            for (int i = 0; i < dado.length; i++) {
+
+                Pantalla.rollDice(dado[i][0], dado[i][1], dado[i][2],
+                        dado[i][3], dado[i][4], dado[i][5]);
+
+            }
+            this.segundaVez = true;
+        } else {
+            int[] selec = new int[this.dadosSellecionados.length()];
+
+            for (int j = 0; j < selec.length; j++) {
+                selec[j] = Character.getNumericValue(this.dadosSellecionados.charAt(j));
+
+            }
+
+            for (int i = 0; i < selec.length; i++) {
+
+                Pantalla.rollDice(dado[selec[i]][0], dado[selec[i]][1], dado[selec[i]][2],
+                        dado[selec[i]][3], dado[selec[i]][4], dado[selec[i]][5]);
+
+            }
+
+            this.dadosSellecionados = "";
+
+            Tirar.setEnabled(false);
+            this.segundaVez = false;
 
         }
+
+
     }//GEN-LAST:event_TirarMousePressed
 
     private void TransparenciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransparenciaMouseClicked
         if (!Rojo.isVisible()) {
             Rojo.setVisible(true);
+            dadosSellecionados = dadosSellecionados + "0";
         } else {
             Rojo.setVisible(false);
+            dadosSellecionados = dadosSellecionados.replace("0", "");
         }
+
     }//GEN-LAST:event_TransparenciaMouseClicked
 
     private void Transparencia2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Transparencia2MouseClicked
@@ -660,32 +692,40 @@ public class Pantalla extends javax.swing.JFrame {
 
         if (!Rojo2.isVisible()) {
             Rojo2.setVisible(true);
+            dadosSellecionados = dadosSellecionados + "1";
         } else {
             Rojo2.setVisible(false);
+            dadosSellecionados = dadosSellecionados.replace("1", "");
         }
     }//GEN-LAST:event_Transparencia2MouseClicked
 
     private void Transparencia3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Transparencia3MouseClicked
         if (!Rojo3.isVisible()) {
             Rojo3.setVisible(true);
+            dadosSellecionados = dadosSellecionados + "2";
         } else {
             Rojo3.setVisible(false);
+            dadosSellecionados = dadosSellecionados.replace("2", "");
         }
     }//GEN-LAST:event_Transparencia3MouseClicked
 
     private void Transparencia4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Transparencia4MouseClicked
         if (!Rojo4.isVisible()) {
             Rojo4.setVisible(true);
+            dadosSellecionados = dadosSellecionados + "3";
         } else {
             Rojo4.setVisible(false);
+            dadosSellecionados = dadosSellecionados.replace("3", "");
         }
     }//GEN-LAST:event_Transparencia4MouseClicked
 
     private void Transparencia5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Transparencia5MouseClicked
         if (!Rojo5.isVisible()) {
             Rojo5.setVisible(true);
+            dadosSellecionados = dadosSellecionados + "4";
         } else {
             Rojo5.setVisible(false);
+            dadosSellecionados = dadosSellecionados.replace("4", "");
         }
     }//GEN-LAST:event_Transparencia5MouseClicked
 
