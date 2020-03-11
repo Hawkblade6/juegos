@@ -9,16 +9,52 @@ public class Pantalla extends javax.swing.JFrame {
 
     boolean segundaVez = false;
     String dadosSellecionados = "";
+    String sonidoDados;
+    String sonidoDados2;
+    // new javax.swing.ImageIcon(getClass().getResource("/PokerDeDados/fotos/dado5.PNG"
 
     /**
      * Creates new form Pantalla
      */
     public Pantalla() {
+        this.sonidoDados = (getClass().getResource("/PokerDeDados/fotos/rolldice.wav")).toString().substring(6);
+
+        this.sonidoDados2 = (getClass().getResource("/PokerDeDados/fotos/rolldice2.wav")).toString().substring(6);
         initComponents();
     }
 
-    
-    
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> {
+            Pantalla pantalla = new Pantalla();
+            Metodos.iniciarPantalla(pantalla, pantalla.bkgrnd, pantalla.Rojo,
+                    pantalla.Rojo2, pantalla.Rojo3, pantalla.Rojo4, pantalla.Rojo5);
+
+        });
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -562,6 +598,8 @@ public class Pantalla extends javax.swing.JFrame {
 
     private void TirarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TirarMousePressed
 
+        Metodos.playMusic(sonidoDados);
+
         javax.swing.JLabel dado[][] = {
             {King, Queen, Jack, Nine, Ten, Ace
             },
@@ -580,12 +618,13 @@ public class Pantalla extends javax.swing.JFrame {
 
             for (int i = 0; i < dado.length; i++) {
 
-               Metodos.rollDice(dado[i][0], dado[i][1], dado[i][2],
+                Metodos.rollDice(dado[i][0], dado[i][1], dado[i][2],
                         dado[i][3], dado[i][4],
                         dado[i][5]);
 
             }
             this.segundaVez = true;
+
         } else {
             int[] selec = new int[this.dadosSellecionados.length()];
 
@@ -601,19 +640,18 @@ public class Pantalla extends javax.swing.JFrame {
 
             }
 
+            
             this.dadosSellecionados = "";
-
             Tirar.setEnabled(false);
             this.segundaVez = false;
 
         }
-
+        Metodos.playMusic(sonidoDados2);
+    
 
     }//GEN-LAST:event_TirarMousePressed
 
     private void TransparenciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransparenciaMouseClicked
-
-      
 
         if (!Rojo.isVisible()) {
             Rojo.setVisible(true);
@@ -626,17 +664,15 @@ public class Pantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_TransparenciaMouseClicked
 
 
-    
-    
     private void Transparencia2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Transparencia2MouseClicked
 
-                if (!Rojo2.isVisible()) {
-                    Rojo2.setVisible(true);
-                    dadosSellecionados = dadosSellecionados + "1";
-                } else {
-                    Rojo2.setVisible(false);
-                    dadosSellecionados = dadosSellecionados.replace("1", "");
-                }
+        if (!Rojo2.isVisible()) {
+            Rojo2.setVisible(true);
+            dadosSellecionados = dadosSellecionados + "1";
+        } else {
+            Rojo2.setVisible(false);
+            dadosSellecionados = dadosSellecionados.replace("1", "");
+        }
     }//GEN-LAST:event_Transparencia2MouseClicked
 
     private void Transparencia3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Transparencia3MouseClicked
@@ -673,47 +709,9 @@ public class Pantalla extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TirarActionPerformed
 
-                /**
-                 * @param args the command line arguments
-                 */
-                public static void main(String args[]) {
-                    /* Set the Nimbus look and feel */
-                    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-                    /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-                     */
-                    try {
-                        for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                            if ("Nimbus".equals(info.getName())) {
-                                javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                                break;
-                            }
-                        }
-                    } catch (ClassNotFoundException ex) {
-                        java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-                    } catch (InstantiationException ex) {
-                        java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-                    } catch (IllegalAccessException ex) {
-                        java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-                    } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-                        java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-                    }
-                    //</editor-fold>
-
-                    /* Create and display the form */
-                    java.awt.EventQueue.invokeLater(() -> {
-                        Pantalla pantalla = new Pantalla();
-                        pantalla.setVisible(true);
-                        pantalla.bkgrnd.setVisible(true);
-                        pantalla.Rojo.setVisible(false);
-                        pantalla.Rojo2.setVisible(false);
-                        pantalla.Rojo3.setVisible(false);
-                        pantalla.Rojo4.setVisible(false);
-                        pantalla.Rojo5.setVisible(false);
-
-                    }
-                    );
-                }
+    /**
+     * @param args the command line arguments
+     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Ace;

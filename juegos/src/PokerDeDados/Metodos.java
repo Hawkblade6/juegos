@@ -5,12 +5,51 @@
  */
 package PokerDeDados;
 
+import java.io.File;
+import java.io.IOException;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
 /**
  *
  * @author ines
  */
 public class Metodos {
-    
+
+  
+    static void iniciarPantalla(Pantalla pantalla, javax.swing.JLabel bkgrnd, javax.swing.JLabel r1, javax.swing.JLabel r2,
+            javax.swing.JLabel r3, javax.swing.JLabel r4, javax.swing.JLabel r5) {
+
+        pantalla.setVisible(true);
+        bkgrnd.setVisible(true);
+        r1.setVisible(false);
+        r2.setVisible(false);
+        r3.setVisible(false);
+        r4.setVisible(false);
+        r5.setVisible(false);
+    }
+
+    static void playMusic(String musicfile) {
+
+        try {
+            File musicPath = new File(musicfile);
+
+            if (musicPath.exists()) {
+                AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioInput);
+                clip.start();
+            } else {
+                System.out.println("cannot find audio file");
+            }
+
+        } catch (IOException | LineUnavailableException | UnsupportedAudioFileException ex) {
+        }
+    }
+
     static void setToFalse(javax.swing.JLabel k, javax.swing.JLabel q, javax.swing.JLabel j, javax.swing.JLabel t, javax.swing.JLabel a, javax.swing.JLabel n) {
         k.setVisible(false);
         q.setVisible(false);
@@ -18,10 +57,6 @@ public class Metodos {
         n.setVisible(false);
         t.setVisible(false);
         a.setVisible(false);
-    }
-
-    void setToFalse(Pantalla pantalla) {
-
     }
 
     static void rollDice(javax.swing.JLabel k, javax.swing.JLabel q, javax.swing.JLabel j, javax.swing.JLabel n, javax.swing.JLabel t, javax.swing.JLabel a) {
