@@ -12,7 +12,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-
+import javax.swing.*;
 /**
  *
  * @author ines
@@ -20,8 +20,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 public class Metodos {
 
   
-    static void iniciarPantalla(Pantalla pantalla, javax.swing.JLabel bkgrnd, javax.swing.JLabel r1, javax.swing.JLabel r2,
-            javax.swing.JLabel r3, javax.swing.JLabel r4, javax.swing.JLabel r5) {
+    static void iniciarPantalla(Pantalla pantalla, JLabel bkgrnd, JLabel r1, JLabel r2, JLabel r3, JLabel r4, JLabel r5) {
 
         pantalla.setVisible(true);
         bkgrnd.setVisible(true);
@@ -32,25 +31,8 @@ public class Metodos {
         r5.setVisible(false);
     }
 
-    static void playMusic(String musicfile) {
 
-        try {
-            File musicPath = new File(musicfile);
-
-            if (musicPath.exists()) {
-                AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
-                Clip clip = AudioSystem.getClip();
-                clip.open(audioInput);
-                clip.start();
-            } else {
-                System.out.println("cannot find audio file");
-            }
-
-        } catch (IOException | LineUnavailableException | UnsupportedAudioFileException ex) {
-        }
-    }
-
-    static void setToFalse(javax.swing.JLabel k, javax.swing.JLabel q, javax.swing.JLabel j, javax.swing.JLabel t, javax.swing.JLabel a, javax.swing.JLabel n) {
+    static void setToFalse(JLabel k, JLabel q, JLabel j, JLabel t, JLabel a, JLabel n) {
         k.setVisible(false);
         q.setVisible(false);
         j.setVisible(false);
@@ -59,7 +41,7 @@ public class Metodos {
         a.setVisible(false);
     }
 
-    static void rollDice(javax.swing.JLabel k, javax.swing.JLabel q, javax.swing.JLabel j, javax.swing.JLabel n, javax.swing.JLabel t, javax.swing.JLabel a) {
+    static void rollDice(JLabel k, JLabel q, JLabel j, JLabel n, JLabel t, JLabel a) {
 
         new Thread() {
             @Override
@@ -104,5 +86,24 @@ public class Metodos {
             }
         }.start();
 
+    }
+    
+    
+    static void playMusic(String musicfile) {
+
+        try {
+            File musicPath = new File(musicfile);
+
+            if (musicPath.exists()) {
+                AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioInput);
+                clip.start();
+            } else {
+                System.out.println("cannot find audio file");
+            }
+
+        } catch (IOException | LineUnavailableException | UnsupportedAudioFileException ex) {
+        }
     }
 }
